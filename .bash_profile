@@ -6,7 +6,7 @@ export SVN_EDITOR=vim
 
 git config --global user.name "Joseph Wilk"
 git config --global color.ui "auto"
-git config --global user.email josephwilk@joesniff.co.uk
+git config --global user.email *@*.co.uk
 
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
