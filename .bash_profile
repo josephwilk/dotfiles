@@ -15,7 +15,7 @@ alias m="mate"
 
 alias rspec="cd /Users/joseph/Workspace/ruby/rspec/"
 alias work="cd /Users/joseph/Workspace/"
-alias joesniff="cd /Users/joseph/Workspace/ruby/joesniff/"
+alias jw="cd /Users/joseph/Workspace/ruby/josephwilk/"
 
 alias ss="script/server"
 alias rs='./rstakeout.rb "ruby stories/all.rb"'
