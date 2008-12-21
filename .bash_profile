@@ -11,6 +11,9 @@ git config --global user.email *@*.co.uk
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
+alias gits="git status"
+alias gitb="git branch -a"
+
 alias m="mate"
 
 alias rspec="cd /Users/joseph/Workspace/ruby/rspec/"
@@ -18,7 +21,6 @@ alias work="cd /Users/joseph/Workspace/"
 alias jw="cd /Users/joseph/Workspace/ruby/josephwilk/"
 
 alias ss="script/server"
-alias rs='./rstakeout.rb "ruby stories/all.rb"'
 alias as='autospec'
 
 alias ls="ls -G"
