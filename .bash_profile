@@ -45,10 +45,10 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 #Directories
-alias rspec="cd /Users/joseph/Workspace/ruby/rspec/"
-alias work="cd /Users/joseph/Workspace/"
-alias jw="cd /Users/joseph/Workspace/ruby/josephwilk/"
-
+alias rspec="cd ~/Workspace/ruby/rspec/"
+alias work="cd ~/Workspace/"
+alias jw="cd ~/Workspace/ruby/josephwilk/"
+alias cuke="jw; cd cucumber"
 
 
 # BASH Completion
