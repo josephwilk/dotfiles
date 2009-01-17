@@ -11,14 +11,11 @@ git config --global user.email *@*.co.uk
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
+#Commands
 alias gits="git status"
 alias gitb="git branch -a"
-
 alias m="mate"
-
-alias rspec="cd /Users/joseph/Workspace/ruby/rspec/"
-alias work="cd /Users/joseph/Workspace/"
-alias jw="cd /Users/joseph/Workspace/ruby/josephwilk/"
+alias gem="sudo gem"
 
 alias ss="script/server"
 alias as='autospec'
@@ -46,6 +43,12 @@ alias cd....="cd ../../.."
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+
+#Directories
+alias rspec="cd /Users/joseph/Workspace/ruby/rspec/"
+alias work="cd /Users/joseph/Workspace/"
+alias jw="cd /Users/joseph/Workspace/ruby/josephwilk/"
+
 
 
 # BASH Completion
