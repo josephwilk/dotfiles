@@ -45,11 +45,11 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 #Directories
-alias rspec="cd ~/Workspace/ruby/rspec/"
 alias work="cd ~/Workspace/"
-alias jw="cd ~/Workspace/ruby/josephwilk/"
+alias rb="work; cd ruby"
+alias jw="rb; cd josephwilk"
 alias cuke="jw; cd cucumber"
-
+alias rspec="rb; cd rspec/"
 
 # BASH Completion
 complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | grep -v "\["`;)" ssh
