@@ -4,17 +4,16 @@ export PATH=/usr/local/bin:$PATH
 export GREP_OPTIONS=--exclude=\*.svn\*
 export SVN_EDITOR=vim
 
-git config --global user.name "Joseph Wilk"
-git config --global color.ui "auto"
-git config --global user.email *@*.co.uk
-
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
 #Commands
 alias gits="git status"
 alias gitb="git branch -a"
+alias gitc="git commit -m"
+
 alias m="mate"
+alias e="emacs"
 alias gem="sudo gem"
 
 alias ss="script/server"
