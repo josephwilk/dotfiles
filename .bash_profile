@@ -11,6 +11,8 @@ bind '"\e[B":history-search-forward'
 alias gits="git status"
 alias gitb="git branch -a"
 alias gitc="git commit -m"
+alias gitd="git diff"
+alias gitdc="git diff --cached"
 
 alias m="mate"
 alias e="emacs"
