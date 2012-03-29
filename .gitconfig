@@ -1,0 +1,16 @@
+[user]
+	name = Joseph Wilk
+	email = joe@josephwilk.net
+[core]
+	editor = vim
+[alias]
+	last = cat-file commit HEAD
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = true
+[alias]
+        co = checkout
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
