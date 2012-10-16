@@ -44,32 +44,22 @@ export EC2_URL='https://eu-west-1.ec2.amazonaws.com'
 echo 'if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi' >> ~/.$profile fi
 
 
-alias gitd="git diff --cached"
-alias gitc="git commit -m"
-alias gcm="git commit -m"
 alias be="bundle exec"
+alias bi='bundle install --path .bundle/gems --binstubs .bundle/bin'
 
 export GIT_EDITOR="mate -w"
 
 alias spec='spec -c'
 alias cuke='cucumber'
 
-#Songkick
-#export SK_NAMESPACE=default
-
-#alias cukes='cucumber _0.3.11.6_'
-
 alias gpl="git pull --rebase; git submodule update --init --recursive"
 alias gst="git status"
+alias gitd="git diff --cached"
+alias gitc="git commit -m"
+alias gcm="git commit -m"
 
 alias ssh-joe="ssh joe@of1-dev-joe"
 alias ssh-ci="ssh of1-dev-ci"
-
-alias sk="cd ~/Workspace/ruby/sk"
-alias skweb="sk; cd skweb"
-alias api="skweb; cd vendor/api"
-alias silod="SONGKICK_ENV=features SK_NAMESPACE=default SONGKICK_DEBUG=info ./bin/silovatord run"
-alias cuke_siloless="NO_SILOVATOR=1 SK_NAMESPACE=default cucumber"
 
 alias mysql="/usr/bin/mysql"
 
