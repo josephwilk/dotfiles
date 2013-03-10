@@ -3,11 +3,6 @@
   '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
 
-(setq nrepl-tab-command 'indent-for-tab-command)
-
-(setq nrepl-popup-stacktraces nil)
-(add-to-list 'same-window-buffer-names "*nrepl*")
-
 (global-set-key (kbd "C-c <left>") 'windmove-left)
 (global-set-key (kbd "C-c <right>") 'windmove-right)
 (global-set-key (kbd "C-c <up>") 'windmove-up)
@@ -18,31 +13,16 @@
 (add-hook 'after-save-hook 'whitespace-cleanup)
 
 ;;clojure
-(setq nrepl-popup-stacktraces nil)
-
 (defun turn-on-paredit () (paredit-mode 1))
 (add-hook 'clojure-mode-hook 'turn-on-paredit)
 
 (defun turn-on-rainbow () (rainbow-delimiters-mode 1))
 (add-hook 'clojure-mode-hook 'turn-on-rainbow)
 
-(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
-(add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'nrepl-mode))
 
-(add-hook 'nrepl-mode-hook 'set-auto-complete-as-completion-at-point-function)
-(add-hook 'nrepl-interaction-mode-hook 'set-auto-complete-as-completion-at-point-function)
-(add-hook 'nrepl-interaction-mode-hook 'nrepl-turn-on-eldoc-mode)
-(add-hook 'nrepl-mode-hook 'subword-mode)
-(add-hook 'nrepl-mode-hook 'paredit-mode)
-(eval-after-load 'nrepl
-  '(define-key nrepl-interaction-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc))
-
 ;; nrepl isn't based on comint
-(add-hook 'nrepl-mode-hook
-          (lambda () (setq show-trailing-whitespace nil)))
-
 (add-hook 'clojure-mode 'enabled-midje-mode)
 
 (add-to-list 'load-path "/Users/josephwilk/.emacs.d/elpa/midje-mode")
@@ -53,6 +33,16 @@
   (add-to-list 'load-path "/Users/josephwilk/.emacs.d/elpa/midje-mode")
   (require 'midje-mode)
 )
+
+
+(add-hook 'nrepl-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'nrepl-mode-hook 'paredit-mode)
+(add-hook 'nrepl-interaction-mode-hook 'nrepl-turn-on-eldoc-mode)
+(setq nrepl-hide-special-buffers t)
+(setq nrepl-popup-stacktraces nil)
+(setq nrepl-popup-stacktraces-in-repl t)
+(add-to-list 'same-window-buffer-names "*nrepl*")
+
 
 (load-theme 'adwaita)
 
