@@ -12,6 +12,10 @@
 (global-set-key (kbd "C-|") 'whitespace-cleanup)
 (add-hook 'after-save-hook 'whitespace-cleanup)
 
+; git-gutter
+(add-hook 'clojure-mode-hook 'git-gutter-mode)
+(setq git-gutter:lighter " GitGutter")
+
 ;;clojure
 (defun turn-on-paredit () (paredit-mode 1))
 (add-hook 'clojure-mode-hook 'turn-on-paredit)
