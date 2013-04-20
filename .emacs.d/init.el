@@ -51,7 +51,17 @@
   (add-to-list 'load-path "/Users/josephwilk/.emacs.d/elpa/midje-mode")
   (require 'midje-mode)) 
 
+(add-hook 'nrepl-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'nrepl-mode-hook 'paredit-mode)
+(add-hook 'nrepl-interaction-mode-hook 'nrepl-turn-on-eldoc-mode)
+(setq nrepl-hide-special-buffers t)
+(setq nrepl-popup-stacktraces nil)
+(setq nrepl-popup-stacktraces-in-repl t)
+(add-to-list 'same-window-buffer-names "*nrepl*")
+
 (load-theme 'adwaita)
+
+(global-auto-revert-mode t)
 
 (remove-hook 'prog-mode-hook 'esk-turn-on-hl-line-mode)
 (remove-hook 'coding-hook 'turn-on-hl-line-mode)
