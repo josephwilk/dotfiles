@@ -109,3 +109,6 @@ source ~/.rvm/scripts/rvm
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Tensorflow compile .so
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/Users/josephwilk/Workspace/c++/tensorflow/bazel-bin/tensorflow/:"
